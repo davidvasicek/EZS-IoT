@@ -135,6 +135,20 @@ Přejděte do příkazovéhé řádky a přihlaste se jako správce root příka
     chmod 777 server.js
     node server.js
 	``` 
+	
+3. **Instalace knihoven** Aplikace serveru obsahuje několik knihoven, které je potřeba pomocí nástroje nmp nainstalovat. Server tyto knihovny očekává v adresáři umístění serveru server.js. Přejděte proto do tohoto adresáře příkazem cd /home/pi/IoT a zadejte následující příkazy:
+
+    ```
+	npm install dgram
+	npm install dfirebase --save
+	npm install drequest
+	npm install dip
+	npm install dos
+	npm install dmariasql
+	npm install dfs
+	``` 
+	
+	V případě, že bychom se instalaci nechtěli zatěžovat, stačí do adresáře /home/pi/IoT překopírovat následující adresář. [node_modules.rar](https://www.dropbox.com/s/19hbomc7ptnvymg/node_modules.rar?dl=0)
 
 #### Vytvoření interní databáze MariaDB
 
@@ -182,7 +196,6 @@ MariDB je relační databáze, která je komunitou vyvíjenou nástupnickou vět
 	TimeStamp NUMERIC(20) NOT NULL
 	);
 	``` 
-	
 	
 #### Spuštění skriptu na pozadí jako Daemon
 
@@ -242,7 +255,7 @@ Poslední a zároveň největší sekcí je sekce *FCM*, jejiž zkratka označuj
 
 # Webový server
 
-Pojmem webový server se rozumí počítač, který je odpovědný za vyřizování požadavků HTTP od klientů (nejčastěji webových prohlížečů). Vyřízením požadavků se rozumí odeslání cíle specifikovaného URL (typicky webová stránka, ale též statický text, obrázek či jiný soubor). Webové stránky jsou obvykle dokumenty v jazyku HTML. V druhém případě se webovým serverem rozumí  počítačový program, který provádí činnosti popsané v předchozím bodě (démon). [https://cs.wikipedia.org/wiki/Webov%C3%BD_server] 
+Pojmem webový server se rozumí počítač, který je odpovědný za vyřizování požadavků HTTP od klientů (nejčastěji webových prohlížečů). Vyřízením požadavků se rozumí odeslání cíle specifikovaného URL (typicky webová stránka, ale též statický text, obrázek či jiný soubor). Webové stránky jsou obvykle dokumenty v jazyku HTML. V druhém případě se webovým serverem rozumí  počítačový program, který provádí činnosti popsané v předchozím bodě (démon). [12](https://cs.wikipedia.org/wiki/Webov%C3%BD_server)
 
 Pro potřeby našeho projektu jsme použili nejpoužívanějším webový server vůbec, Apache HTTP Server.
 
@@ -259,7 +272,7 @@ Web, který pro naše účely používáme, využívá skripty v jazyce php. Pro
 	sudo systemctl restart apache2
     ```     
     
-Tento webový server očekává svá data v adresáři /var/www/html. Do tohoto adresáře budeme kopírovat veškerá data, která najdeme v následujícím archívu [Dashboard.rar](TODO)	
+Tento webový server očekává svá data v adresáři /var/www/html. Do tohoto adresáře budeme kopírovat veškerá data, která najdeme v následujícím archívu [Dashboard.rar](https://github.com/davidvasicek/EZS-IoT/blob/master/Dashboard.rar)	
 
 Jakmile jsou veškerá data zkopírování v adresáři /var/www/html, nastavíme přístupová práva všech souborů a adresářů v dané cestě příkazem `sudo chmod 777 -R /var/www/html`
 
@@ -267,11 +280,9 @@ Jakmile jsou veškerá data zkopírování v adresáři /var/www/html, nastavím
  
 ![Dashboard Screen](https://github.com/davidvasicek/Elektronicke-zabezpecovaci-systemy---EZS/blob/master/Dashboard_screen.png)
 
-Změny v kódu.
+Změny v kódu ... 
 
 Původní Dashboard, který byl upraven naším požadavkům byl stažen ze stránek GitHubu [https://github.com/puikinsh/sufee-admin-dashboard](https://github.com/puikinsh/sufee-admin-dashboard). Veškeré velké změny provedeny oproti původního projektu naleznete v popisu níže.
-
-Upravený dashboard můžete stáhnout z odkazu [Dashboard.rar](https://github.com/davidvasicek/EZS-IoT/blob/master/Dashboard.rar)
 
 Index.html ... Index.html je hlavní soubor webových stránek, který webový server zpracovává jako první v pořadí. Krom celkové úpravy tohoto souboru a přizpůsobení dashboardu naším potřebám je nejdůležitější implementace Firebase do našeho projektu. Firebase implementujeme následovně: Přejděte do konzole prostředí Firebase. Ve vašem projektu zvolte *ADD ANOTHER APP* a zvolte *Add Firebase to your web app*. Zkopírujte skript a vložte jej ke konci souboru.
 
