@@ -35,7 +35,7 @@ Potřebné knihovny: **BME280** [Download](https://github.com/adafruit/Adafruit_
 
 Schéma zapojení bylo vytvořeno v open-source software Fritzing. Tento software můžeme stáhnout ze stránek [http://fritzing.org/download/](http://fritzing.org/download/) 
 
-Veškeré externí součástky, které nejsou součástí knihovny programu Fritzing, naleznete [zde](TODO)
+Veškeré externí součástky, které nejsou součástí knihovny programu Fritzing, naleznete [zde](https://github.com/davidvasicek/EZS-IoT/blob/master/Fritzing_sou%C4%8D%C3%A1stky.rar)
 
 #### PinOut
 
