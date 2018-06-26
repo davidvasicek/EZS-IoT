@@ -46,7 +46,7 @@ Veškeré externí součástky, které nejsou součástí knihovny programu Frit
 
 #### Kód
 
-Kód projektu Arduina naleznete zde: [Arduino.ino](TODO) 
+Kód projektu Arduina naleznete zde: [Arduino.ino](https://github.com/davidvasicek/EZS-IoT/blob/master/Arduino.ino) 
 
 Základní struktura kódu se zakládá na dvou hlavních funkcích, bez nichž by program nemohl fungovat. Z funkce Setup a funkce Loop, které se spouštějí automaticky po zapnutí desky Arduino. Funkce Setup se spouští po každém zapnutí nebo resetování pouze jednou a slouží k inicializaci proměnných, definování režimů pinů, inicializaci knihoven, načtení vstupních dat apod. Funkce Loop, jak už její název napovídá bude automaticky cyklovat, což umožňuje Arduinu reagovat na změny, měnit stav hodnot, funkcí, pinů atd.
 
@@ -222,7 +222,7 @@ MariDB je relační databáze, která je komunitou vyvíjenou nástupnickou vět
 	
 #### Kód
 
-Kód projektu pro raspberry server stáhneme z následujícího odkazu. [Server.js](TODO) (tento kód překopírujte do již dříve vytvořeného souboru server.js v adresáři /home/pi/IoT/)	
+Kód projektu pro raspberry server stáhneme z následujícího odkazu. [Server.js](https://github.com/davidvasicek/EZS-IoT/blob/master/RaspberryPi_server.js) (tento kód překopírujte do již dříve vytvořeného souboru server.js v adresáři /home/pi/IoT/)	
 
 kód serveru se skládá z několika sekcí pro lepší orientaci a snadnější pochopení celého kódu a jeho funkčnosti. Na samotném začátku kódu se nachází import knihoven (balíčků) spravovaného nástrojem npm, inicializace realtime databáze Firebase a inicializace klienta pro Maria databázi.
 
@@ -271,6 +271,8 @@ Změny v kódu.
 
 Původní Dashboard, který byl upraven naším požadavkům byl stažen ze stránek GitHubu [https://github.com/puikinsh/sufee-admin-dashboard](https://github.com/puikinsh/sufee-admin-dashboard). Veškeré velké změny provedeny oproti původního projektu naleznete v popisu níže.
 
+Upravený dashboard můžete stáhnout z odkazu [Dashboard.rar](https://github.com/davidvasicek/EZS-IoT/blob/master/Dashboard.rar)
+
 Index.html ... Index.html je hlavní soubor webových stránek, který webový server zpracovává jako první v pořadí. Krom celkové úpravy tohoto souboru a přizpůsobení dashboardu naším potřebám je nejdůležitější implementace Firebase do našeho projektu. Firebase implementujeme následovně: Přejděte do konzole prostředí Firebase. Ve vašem projektu zvolte *ADD ANOTHER APP* a zvolte *Add Firebase to your web app*. Zkopírujte skript a vložte jej ke konci souboru.
 
 V Index.html kódu si můžeme všimnout také implementaci vlastního JavaScriptu Firebase.js (<script src="assets/js/firebase.js"></script>), kde assets/js/ označuje cestu v hierarchiji adresářů, kde soubor můžeme nalézt. Tento skript se stará o vytěžování dat z databáze Firebase a také o ovládání prvků pro zapínání/vypínání světel, či úpravy jejich intenzity. K tomu slouží implementovány přepínače (switch) a posuvníky (RangeBar). Vzhled těchto prvků je definovaný v nově vytvořeném souboru kaskádových stylů, myStyle.css. (
@@ -283,6 +285,8 @@ Zbytek úprav provedeny v ostatních souborech využívají obdobné postupy vý
 # Mobilní aplikace pro platformu Android
 
 ![Android App Screen](https://github.com/davidvasicek/Elektronicke-zabezpecovaci-systemy---EZS/blob/master/Android_app_screen.png)
+
+Aplikaci pro platformmu Android stáhnete z následujícího odkazu. [IoT-EZS.apk](https://github.com/davidvasicek/EZS-IoT/blob/master/IoT-EZS.apk)
 	
 ### Software
 
@@ -296,7 +300,7 @@ Přejděte do konzole prostředí Firebase. Ve vašem projektu zvolte *ADD ANOTH
 
 ### Kód
 
-Kód projektu pro Android Studio stáhneme z následujícího odkazu. [Android_App.rar](TODO)
+Kód projektu pro Android Studio stáhneme z následujícího odkazu. [Android_App.rar](https://www.dropbox.com/s/vvygq6qlhf0o6kg/IoTEZS.rar?dl=0)
 
 Struktura projektu Android aplikace se skládá z celkem tří aktivit (MainActivity, LoginActivity, DevicesActivity), dvou dialogů (AboutAppDialog, LightIntensityDialog), dvou service (FirebaseMessagingService, FirebaseInstanceIDService) a ze dvou objektů (AndroidDevicesObject, LightsObject). Všechny tyto třídy jsou logicky strukturovány do jednotlivých adresářů dle jejich charakteru. 
 
