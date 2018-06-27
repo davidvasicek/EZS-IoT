@@ -31,7 +31,7 @@ Potřebné knihovny: **BME280** [Download](https://github.com/adafruit/Adafruit_
 
 #### Zapojení
 
-![zapojeni](https://github.com/davidvasicek/Elektronicke-zabezpecovaci-systemy---EZS/blob/master/img/Zapojeni1.png)
+![zapojeni](https://github.com/davidvasicek/EZS-IoT/blob/master/Sch%C3%A9ma%20zapojen%C3%AD.png)
 
 Schéma zapojení bylo vytvořeno v open-source software Fritzing. Tento software můžeme stáhnout ze stránek [http://fritzing.org/download/](http://fritzing.org/download/) 
 
