@@ -7,8 +7,8 @@
 
 #define BME280_ADRESA (0x76) // nastavenĂ­ adresy senzoru
 
-const char* ssid = "Gajdic";
-const char* password = "frydekmistek";
+const char* ssid = "IoTnet";
+const char* password = "raspberry";
 
 unsigned int localUdpPort = 2807;  // port
 IPAddress serverAddress;
